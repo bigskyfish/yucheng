@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+# Eureka 服务端配置
+eureka:
+  instance:
+    #eureka实例的主机名
+    hostname: localhost
+  client:
+    # 不注册自身到Eureka注册中心中
+    register-with-eureka: false
+    # 不从注册中心中拉取注册服务
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+

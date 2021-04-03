@@ -1,0 +1,15 @@
+server:
+  port: 8070
+# Eureka配置
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+    instance-id: user-manage
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+    fetch-registry: true
+spring:
+  application:
+    name: user-manage
